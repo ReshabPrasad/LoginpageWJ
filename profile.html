@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" href="style2.css"> -->
+    <title>Document</title>
+    <link rel="stylesheet" href="profile.css">
+</head>
+<body>
+
+  <!-- <nav id="navbar">
+    <div id="logo">
+        <img src="Resources/purplelogo.jpg" alt="MindfulWellbeing.com" srcset="">
+    </div>
+    <div class="site">
+        <p>BeingMindful.com</p>
+    </div>
+    
+    <ul>
+        
+        <li class="item"><a href="index.html">Home</a></li>
+        <li class="item"><a href="/services">Services</a></li>
+        <li class="item"><a href="about.html">About</a></li>
+        <li class="item"><a href="/contact">Contact</a></li>
+        <li class="item"><input onclick=" " type="button" value = "Nearby centres" id = "mybtn1"></input>
+    </ul>
+</nav> -->
+
+    <div class="card">
+        <div class="card_background_img"></div>
+        <div class="card_profile_img"></div>
+        <div class="username">
+            <h2>Rounak Kumar</h2>
+        </div>
+        <div class="user_details">
+            <p id="user" class="details">Email : < email-id > </p>
+                <input onclick="" type="button" value = "Log-Out" id = "logout"></input>
+        </div>
+        <div class="card_count">
+            <div class="count">
+                <div class="fans">
+                    <p>XYZ</p>
+                    <h3>222</h3>
+                </div>
+                <div class="score">
+                    <p>Current Score</p>
+                    <h3>000</h3>
+                </div>
+                <div class="streak">
+                    <p>Max Streak</p>
+                    <h3>23 days</h3>
+                </div>
+            </div>
+
+            <div id="test">
+              <div id="left">
+                <h4>Test yourself</h4>  
+                <input onclick="" type="button" value = "Click" id = "test_btn"></input>
+              </div>
+              <div id="right">
+                <h4>Score Chart</h4>
+                <div id="pichart"></div>
+              </div>
+            </div>
+            <div>
+                <table>
+
+                        <thead>
+                          <tr>
+                            <th colspan="3">Past Records</th>
+                          </tr>
+                          <tr>
+                            <th>Serial No.</th>
+                            <th>Date</th>
+                            <th>Your Score</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td>1</td>
+                            <td>15/12/23</td>
+                            <td>400</td>
+                          </tr>
+                          <tr>
+                            <td>2</td>
+                            <td>16/12/23</td>
+                            <td>300</td>
+                          </tr>
+                          <tr>
+                            <td>3</td>
+                            <td>17/12/23</td>
+                            <td>200</td>
+                          </tr>
+                        </tbody>
+                </table> 
+            </div>2222
+            
+        </div>
+    </div>
+
+    <script type="module">
+      // Import the functions you need from the SDKs you need
+      import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js";
+      import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-analytics.js";
+      import { getAuth } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-auth.js";
+      // TODO: Add SDKs for Firebase products that you want to use
+      // https://firebase.google.com/docs/web/setup#available-libraries
+    
+      // Your web app's Firebase configuration
+      // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+
+      
+
+const firebaseConfig = {
+    apiKey : "AIzaSyDbCZxOmijmeGzAzW1dgO_JDMrPNByF_V0",
+    authDomain: "waningjackloginpage.firebaseapp.com",
+    projectId: "waningjackloginpage",
+    storageBucket: "waningjackloginpage.appspot.com",
+    messagingSenderId: "81305134840",
+    appId: "1:81305134840:web:aaa33939adf94c0cda7d0d",
+    measurementId: "G-JVQVZLX9S9"
+  };
+
+  // Initialize Firebase
+  const app = initializeApp(firebaseConfig);
+  const analytics = getAnalytics(app);
+  const auth=getAuth(app);
+
+
+
+
+  import {  onAuthStateChanged } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-auth.js";
+onAuthStateChanged(auth, (user) => {
+  if (!user) {
+    location.replace("login.html")
+  }
+});
+
+      
+    </script>
+
+
+
+     <!-- <script src="profile.js"></script> -->
+
+
+</body>
+</html>
